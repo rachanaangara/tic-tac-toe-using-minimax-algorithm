@@ -25,6 +25,8 @@
     <li>After they come to one of the conclusions, the button provided to the user will be automatically renamed to "return" and when it is clicked, it will redirect the user to the hoomepage</li>
 </ul>
 
-If you've any doubts and/or facing problems while running the code, please let me know in the discussion page or you can mail me - rachanaangara1@gmail.com for prompt reply.
+I have also attached a video of the output.
+
+If you have any doubts and/or facing problems while running the code, please let me know in the discussion page or you can mail me - rachanaangara1@gmail.com for prompt reply.
 Please make sure your subject contains "git tic-tac-toe-using-minimax-algorithm".
 
