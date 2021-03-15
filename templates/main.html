@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tic tac toe</title>
+	<style>
+	body {
+			background-image:url('https://image.freepik.com/free-vector/abstract-background-with-a-watercolor-texture_1048-2144.jpg');
+			background-size: cover;
+			font-family:serif;
+			font-weight: bold;
+		}
+	  .header
+	  {
+		color:black;
+		height:130px;
+		text-align:center;
+		font-size:140%;
+	  }
+	  .start
+	  {
+		padding-top:35px;
+	  }
+	  .main
+	  {
+		height:300px;
+	  }
+	  .table
+	  {
+		padding:80px 530px;
+	  }
+	  .footer
+	  {
+		height:120px;
+		margin-left:520px;
+		margin-top:30px
+	  }
+	  .table input[type=submit] 
+	  {
+		width: 10em;  height: 3em;
+		background: transparent;
+		margin-bottom:10px;
+		margin-left:55px;
+		margin-top:30px;
+	  }
+	  input[type=text] 
+	  {
+		width: 4em;  height: 2.5em;
+		margin-left:2px;
+		background: transparent;
+		border: none;
+		border-color: transparent;
+	    text-align:center; 
+		font-size:100%;
+	  }
+	  input[type=submit]:hover 
+	  {
+		  background-color:#48AAAD;
+		  color:black;
+      }
+	  input[type=text]:hover 
+	  {
+		  background-color:#48AAAD;
+		  color:black;
+      }
+	  .table a
+	  {
+		color:blue;
+		font-size:200%;
+		border-right:5px solid black;
+	  }
+	  
+	  .table p
+	  {
+		border-bottom: 4px solid black;
+		width:245px;
+	  }
+	  a
+	  {
+		border-right:5px solid black;
+		padding-right:8px;
+	  }
+	  .border
+	  {}
+	</style>
+</head>
+  <body>
+    <div class="header">
+      <p class="start">WELCOME</p>
+      <p>Enter your inputs in each cell with either of the folowing options</p>
+	  <p>e - "Empty" | o | x</p>
+    </div>
+	<div class="table">
+		<form action = "/startgame" method="post">
+			<input type="text" id="c1" name="c1" maxlength="1" size="1"><a></a>
+			<input type="text" id="c2" name="c2" maxlength="1" size="1"><a></a>
+			<input type="text" id="c3" name="c3" maxlength="1" size="1">
+			<p></p>
+			<input type="text" id="c4" name="c4" maxlength="1" size="1"><a></a>
+			<input type="text" id="c5" name="c5" maxlength="1" size="1"><a></a>
+			<input type="text" id="c6" name="c6" maxlength="1" size="1">
+			<p></p>
+			<input type="text" id="c7" name="c7" maxlength="1" size="1"><a></a>
+			<input type="text" id="c8" name="c8" maxlength="1" size="1"><a></a>
+			<input type="text" id="c9" name="c9" maxlength="1" size="1">  
+			<input type="submit" value="Start">
+		</form>
+		<form action = "/resetBoard">
+			<input type="submit" value="Reset">
+		</form>
+	</div>	
+  </body>
+</html>

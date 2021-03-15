@@ -1,0 +1,113 @@
+<html> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <title> Index </title> 
+		<style>
+	
+	.header
+	  {
+	    margin-top:20px;
+		color:black;
+		height:130px;
+		text-align:center;
+		font-size:140%;
+	  }
+		body 
+		{
+		background-image:url('/static/sbg.jpeg');
+		background-size: cover;
+		font-family:serif;
+		font-weight: bold;
+		}
+		.table
+		{
+			padding-top:80px;
+			padding-right:80px;
+			padding-left:535px;
+			padding-bottom:20px;
+		}
+		input[type=text]
+	  {
+		width: 4em;  height: 2.5em;
+		margin-left:2px;
+		background: transparent;
+	    border: none;
+		border-color: transparent;
+		text-align:center; 
+		font-size:120%;
+		font-weight: bold;
+	  }
+	  input[type=submit]
+	  {
+	    width: 10em;  height: 3em;
+		background: transparent;
+		margin-left:605px;
+	  }
+	  input[type=submit]:hover 
+	  {
+		  background-color:#FC94AF;
+		  color:black;
+      }
+	  .table a
+	  {
+		color:blue;
+		font-size:200%;
+		border-right:5px solid black;
+	  }
+	  
+	  .table p
+	  {
+		border-bottom: 4px solid black;
+		width:265px;
+	  }
+	  a
+	  {
+		border-right:5px solid black;
+		padding-right:8px;
+	  }
+	  .footer h2
+      {
+	    text-align:center
+	  }	  
+	  .apples
+	  {
+	  color:red;
+	  }
+		</style>
+		
+    </head> 
+    <body>
+		<div class="header">
+		<p>Sit back and enjoy the battle</p>
+		<p>between two bots</p>
+		{% if session.chance%2 ==0 %}
+			<h2>Bot 2 played</h2>
+		{% elif session.chance%2 !=0 %}
+			<h2>Bot 1 played</h2>
+		{% endif %}
+		</div>
+        <div class="table">
+				<input type="text" id="c1" name="c1" maxlength="1" size="1" value={{session.game['1']}} disabled ><a></a>
+				<input type="text" id="c2" name="c2" maxlength="1" size="1" value={{session.game['2']}} disabled><a></a>
+				<input type="text" id="c3" name="c3" maxlength="1" size="1" value={{session.game['3']}} disabled>
+				<p></p>
+				<input type="text" id="c4" name="c4" maxlength="1" size="1" value={{session.game['4']}} disabled><a></a>
+				<input type="text" id="c5" name="c5" maxlength="1" size="1" value={{session.game['5']}} disabled><a></a>
+				<input type="text" id="c6" name="c6" maxlength="1" size="1" value={{session.game['6']}} disabled>
+				<p></p>
+				<input type="text" id="c7" name="c7" maxlength="1" size="1" value={{session.game['7']}} disabled><a></a>
+				<input type="text" id="c8" name="c8" maxlength="1" size="1" value={{session.game['8']}} disabled><a></a>
+				<input type="text" id="c9" name="c9" maxlength="1" size="1" value={{session.game['9']}} disabled>  
+		</div>
+				
+		<div class="footer">				
+			<h2>{{session.msg}}</h2>
+			<form action = "/startgame/moves" method = "POST">
+				
+				<input class="btn" type = "submit" value={{ btn }}/>
+				
+			</form>
+		</div>
+
+    </body> 
+</html> 
